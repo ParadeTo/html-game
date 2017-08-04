@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping Pong</title>
+    <style>
+        #playground {
+            margin: 10rem auto;
+            background: #e0ffe0;
+            width: 400px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        #ball {
+            background: #fbb;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 150px;
+            top: 100px;
+            border-radius: 10px;
+        }
+        .paddle {
+            background: #bbf;
+            left: 50px;
+            top: 70px;
+            position: absolute;
+            width: 30px;
+            height: 70px;
+        }
+        #paddleB {
+            left: 320px;
+        }
+    </style>
+</head>
+<body>
+    <div id="scoreboard">
+        <div class="score">Player A: <span id="scoreA">0</span></div>
+        <div class="score">Player B: <span id="scoreB">0</span></div>
+    </div>
+    <div id="game">
+        <div id="playground">
+            <div id="paddleA" class="paddle"></div>
+            <div id="paddleB" class="paddle"></div>
+            <div id="ball"></div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
