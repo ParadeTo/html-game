@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>你画我猜</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper {
+            padding: 10px;
+            margin: 50px auto;
+            width: 600px;
+            box-shadow: 0 0 5px 1px #ddd;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        #chatList {
+            margin-top: 1rem;
+            max-height: 100px;
+            padding: 0 10px;
+            overflow: scroll;
+            margin-bottom: 1rem;
+        }
+        li {
+            list-style: none;
+        }
+        button {
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
+<div id="wrapper">
+    <!--style 中定义的宽高不对-->
+    <canvas width="500" height="500" id="drawingPad"></canvas>
+    <ul id="chatList"></ul>
+    <input type="text" id="msg" placeholder="说点啥">
+    <button id="sendBtn">发送</button>
+    <button id="restartBtn">重新开始</button>
+</div>
+
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="./index.js"></script>
 </body>
